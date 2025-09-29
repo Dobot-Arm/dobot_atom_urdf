@@ -5,7 +5,7 @@
 <robot name="atom">
     <mujoco>
         <compiler 
-        meshdir="../meshes/" 
+        meshdir="package://atom_urdf/meshes/" 
         balanceinertia="true" 
         discardvisual="false" />
   </mujoco>
@@ -25,7 +25,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/pelvis.STL" />
+        <mesh filename="package://atom_urdf/meshes/pelvis.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -34,7 +34,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/pelvis.STL" />
+        <mesh filename="package://atom_urdf/meshes/pelvis.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -47,7 +47,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l1_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l1_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -56,7 +56,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l1_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l1_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -76,7 +76,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l2_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l2_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -85,7 +85,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l2_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l2_link.STL" />
       </geometry>
   </collision> -->
   </link>
@@ -105,7 +105,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l3_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l3_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -134,7 +134,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l4_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l4_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -163,7 +163,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l5_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l5_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -172,7 +172,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l5_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l5_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -192,7 +192,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l6_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l6_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -201,7 +201,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_l6_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_l6_link.STL" />
       </geometry>
     </collision> -->
     <collision>
@@ -239,7 +239,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r1_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r1_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -248,7 +248,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r1_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r1_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -268,7 +268,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r2_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r2_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -277,7 +277,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r2_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r2_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -297,7 +297,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r3_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r3_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -326,7 +326,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r4_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r4_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -355,7 +355,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r5_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r5_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -364,7 +364,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r5_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r5_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -384,7 +384,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r6_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r6_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -393,7 +393,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/leg_r6_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/leg_r6_link.STL" />
       </geometry>
     </collision> -->
     <collision>
@@ -434,7 +434,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/torso_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/torso_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -454,7 +454,7 @@
     <axis xyz="0 0 1" />
     <limit lower="-2.7925" upper="2.7925" effort="1000" velocity="100" />
   </joint>
-  <link name="uidx_arm_l1_link">
+  <link name="left_shoulder_pitch_link">
     <inertial>
       <origin xyz="0.0044 0.0368 0.0000" rpy="0 0 0" />
       <mass value="0.4473" />
@@ -463,7 +463,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_shoulder_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -472,14 +472,14 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_shoulder_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="uidx_l_arm_joint1" type="fixed">
+  <joint name="left_shoulder_pitch_joint" type="revolute">
     <origin xyz="0 0.128 0.333" rpy="0 0 0" />
     <parent link="torso_link" />
-    <child link="uidx_arm_l1_link" />
+    <child link="left_shoulder_pitch_link" />
     <axis xyz="0 1 0" />
     <limit lower="-2.97" upper="2.97" effort="56" velocity="2.62" />
   </joint>
@@ -492,7 +492,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_shoulder_roll_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_shoulder_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -505,9 +505,9 @@
       </geometry>
     </collision>
   </link>
-  <joint name="left_shoulder_roll_joint" type="fixed">
+  <joint name="left_shoulder_roll_joint" type="revolute">
     <origin xyz="0 0.0780000000000016 0" rpy="0.18 0 0" />
-    <parent link="uidx_arm_l1_link" />
+    <parent link="left_shoulder_pitch_link" />
     <child link="left_shoulder_roll_link" />
     <axis xyz="1 0 0" />
     <limit lower="-0.43" upper="3.14" effort="36" velocity="2.62" />
@@ -521,7 +521,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_shoulder_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -530,18 +530,18 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_shoulder_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="left_shoulder_yaw_joint" type="fixed">
+  <joint name="left_shoulder_yaw_joint" type="revolute">
     <origin xyz="0 0 -0.135" rpy="0 0 0" />
     <parent link="left_shoulder_roll_link" />
     <child link="left_shoulder_yaw_link" />
     <axis xyz="0 0 1" />
     <limit lower="-2.97" upper="2.97" effort="36" velocity="2.62" />
   </joint>
-  <link name="uidx_arm_l2_link">
+  <link name="left_elbow_pitch_link">
     <inertial>
       <origin xyz="0.0903 0.0016 -0.0003" rpy="0 0 0" />
       <mass value="0.8548" />
@@ -550,7 +550,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_elbow_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_elbow_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -563,10 +563,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="uidx_l_arm_joint2" type="fixed">
+  <joint name="left_elbow_pitch_joint" type="revolute">
     <origin xyz="0.00044198773719138 0 -0.130000000000198" rpy="0 0 0" />
     <parent link="left_shoulder_yaw_link" />
-    <child link="uidx_arm_l2_link" />
+    <child link="left_elbow_pitch_link" />
     <axis xyz="0 1 0" />
     <limit lower="-1.57" upper="2" effort="36" velocity="2.62" />
   </joint>
@@ -579,7 +579,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_elbow_roll_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_elbow_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -588,13 +588,13 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_elbow_roll_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_elbow_roll_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="left_elbow_roll_joint" type="fixed">
+  <joint name="left_elbow_roll_joint" type="revolute">
     <origin xyz="0.1453 0 0" rpy="0 0 0" />
-    <parent link="uidx_arm_l2_link" />
+    <parent link="left_elbow_pitch_link" />
     <child link="left_elbow_roll_link" />
     <axis xyz="1 0 0" />
     <limit lower="-2.97" upper="2.97" effort="18.6" velocity="2.62" />
@@ -608,7 +608,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_wrist_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -617,11 +617,11 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_wrist_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="left_wrist_pitch_joint" type="fixed">
+  <joint name="left_wrist_pitch_joint" type="revolute">
     <origin xyz="0.0534500000207669 0 0" rpy="0 0 0" />
     <parent link="left_elbow_roll_link" />
     <child link="left_wrist_pitch_link" />
@@ -637,7 +637,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_wrist_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -646,18 +646,18 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/left_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/left_wrist_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="left_wrist_yaw_joint" type="fixed">
+  <joint name="left_wrist_yaw_joint" type="revolute">
     <origin xyz="0.085 0 0" rpy="0 0 0" />
     <parent link="left_wrist_pitch_link" />
     <child link="left_wrist_yaw_link" />
     <axis xyz="0 0 0.999999999999887" />
     <limit lower="-1.57" upper="1.57" effort="18.6" velocity="2.62" />
   </joint>
-  <link name="uidx_arm_r1_link">
+  <link name="right_shoulder_pitch_link">
     <inertial>
       <origin xyz="0.0044 -0.0368 0.0000" rpy="0 0 0" />
       <mass value="0.4473" />
@@ -666,7 +666,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_shoulder_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -675,14 +675,14 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_shoulder_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="uidx_r_arm_joint1" type="fixed">
+  <joint name="right_shoulder_pitch_joint" type="revolute">
     <origin xyz="0 -0.128 0.333" rpy="0 0 0" />
     <parent link="torso_link" />
-    <child link="uidx_arm_r1_link" />
+    <child link="right_shoulder_pitch_link" />
     <axis xyz="0 1 0" />
     <limit lower="-2.97" upper="2.97" effort="56" velocity="2.62" />
   </joint>
@@ -695,7 +695,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_shoulder_roll_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_shoulder_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -708,9 +708,9 @@
       </geometry>
     </collision>
   </link>
-  <joint name="right_shoulder_roll_joint" type="fixed">
+  <joint name="right_shoulder_roll_joint" type="revolute">
     <origin xyz="0 -0.078 0" rpy="-0.18 0 0" />
-    <parent link="uidx_arm_r1_link" />
+    <parent link="right_shoulder_pitch_link" />
     <child link="right_shoulder_roll_link" />
     <axis xyz="1 0 0" />
     <limit lower="-3.14" upper="0.43" effort="36" velocity="2.62" />
@@ -724,7 +724,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_shoulder_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -733,18 +733,18 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_shoulder_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="right_shoulder_yaw_joint" type="fixed">
+  <joint name="right_shoulder_yaw_joint" type="revolute">
     <origin xyz="0 0 -0.135" rpy="0 0 0" />
     <parent link="right_shoulder_roll_link" />
     <child link="right_shoulder_yaw_link" />
     <axis xyz="0 0 1" />
     <limit lower="-2.97" upper="2.97" effort="36" velocity="2.62" />
   </joint>
-  <link name="uidx_arm_r2_link">
+  <link name="right_elbow_pitch_link">
     <inertial>
       <origin xyz="0.0903 -0.0016 -0.0003" rpy="0 0 0" />
       <mass value="0.8548" />
@@ -753,7 +753,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_elbow_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_elbow_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -766,10 +766,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="uidx_r_arm_joint2" type="fixed">
+  <joint name="right_elbow_pitch_joint" type="revolute">
     <origin xyz="0.000441987737191488 0 -0.130000000000198" rpy="0 0 0" />
     <parent link="right_shoulder_yaw_link" />
-    <child link="uidx_arm_r2_link" />
+    <child link="right_elbow_pitch_link" />
     <axis xyz="0 1 0" />
     <limit lower="-1.57" upper="2" effort="36" velocity="2.62" />
   </joint>
@@ -782,7 +782,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_elbow_roll_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_elbow_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -791,13 +791,13 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_elbow_roll_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_elbow_roll_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="right_elbow_roll_joint" type="fixed">
+  <joint name="right_elbow_roll_joint" type="revolute">
     <origin xyz="0.145293702343308 0 0" rpy="0 0 0" />
-    <parent link="uidx_arm_r2_link" />
+    <parent link="right_elbow_pitch_link" />
     <child link="right_elbow_roll_link" />
     <axis xyz="1 0 0" />
     <limit lower="-2.97" upper="2.97" effort="18.6" velocity="2.62" />
@@ -811,7 +811,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_wrist_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -820,11 +820,11 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_wrist_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="right_wrist_pitch_joint" type="fixed">
+  <joint name="right_wrist_pitch_joint" type="revolute">
     <origin xyz="0.0534499999999523 0 0" rpy="0 0 0" />
     <parent link="right_elbow_roll_link" />
     <child link="right_wrist_pitch_link" />
@@ -840,7 +840,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_wrist_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -849,11 +849,11 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/right_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/right_wrist_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="right_wrist_yaw_joint" type="fixed">
+  <joint name="right_wrist_yaw_joint" type="revolute">
     <origin xyz="0.085 0 0" rpy="0 0 0" />
     <parent link="right_wrist_pitch_link" />
     <child link="right_wrist_yaw_link" />
@@ -869,7 +869,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/head_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/head_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -878,11 +878,11 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/head_yaw_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/head_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
-  <joint name="head_yaw_joint" type="fixed">
+  <joint name="head_yaw_joint" type="revolute">
     <origin xyz="0 0 0.4177" rpy="0 0 0" />
     <parent link="torso_link" />
     <child link="head_yaw_link" />
@@ -898,7 +898,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../meshes/head_pitch_link.STL" />
+        <mesh filename="package://atom_urdf/meshes/head_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -907,12 +907,12 @@
     <collision>
       <origin xyz="0.05 0 0.1" rpy="0 0 0" />
       <geometry>
-        <!-- <mesh filename="../meshes/head_pitch_link.STL" /> -->
+        <!-- <mesh filename="package://atom_urdf/meshes/head_pitch_link.STL" /> -->
         <box size="0.16 0.14 0.14"/>
       </geometry>
     </collision>
   </link>
-  <joint name="head_pitch_joint" type="fixed">
+  <joint name="head_pitch_joint" type="revolute">
     <origin xyz="0 0 0.0" rpy="0 0 0" />
     <parent link="head_yaw_link" />
     <child link="head_pitch_link" />
