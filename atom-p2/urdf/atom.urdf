@@ -3,19 +3,6 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot name="atom">
-    <mujoco>
-        <compiler 
-        meshdir="package://atom_urdf/meshes/" 
-        balanceinertia="true" 
-        discardvisual="false" />
-  </mujoco>
-  
-  <link name="world"></link>
-  <joint name="floating_base_joint" type="floating">
-    <parent link="world"/>
-    <child link="pelvis"/>
-  </joint>
-  
   <link name="pelvis">
     <inertial>
       <origin xyz="0.0006 0.0000 -0.0998" rpy="0 0 0" />
@@ -25,7 +12,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/pelvis.STL" />
+        <mesh filename="package://atom_p2/meshes/pelvis.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -34,7 +21,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/pelvis.STL" />
+        <mesh filename="package://atom_p2/meshes/pelvis.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -47,7 +34,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l1_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l1_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -56,7 +43,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l1_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l1_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -76,7 +63,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l2_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l2_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -85,7 +72,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l2_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l2_link.STL" />
       </geometry>
   </collision> -->
   </link>
@@ -105,7 +92,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l3_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l3_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -134,7 +121,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l4_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l4_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -163,7 +150,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l5_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l5_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -172,7 +159,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l5_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l5_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -192,7 +179,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l6_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l6_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -201,7 +188,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_l6_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_l6_link.STL" />
       </geometry>
     </collision> -->
     <collision>
@@ -239,7 +226,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r1_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r1_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -248,7 +235,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r1_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r1_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -268,7 +255,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r2_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r2_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -277,7 +264,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r2_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r2_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -297,7 +284,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r3_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r3_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -326,7 +313,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r4_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r4_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -355,7 +342,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r5_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r5_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -364,7 +351,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r5_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r5_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -384,7 +371,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r6_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r6_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -393,7 +380,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/leg_r6_link.STL" />
+        <mesh filename="package://atom_p2/meshes/leg_r6_link.STL" />
       </geometry>
     </collision> -->
     <collision>
@@ -434,7 +421,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/torso_link.STL" />
+        <mesh filename="package://atom_p2/meshes/torso_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -447,7 +434,7 @@
       </geometry>
     </collision>
   </link>
-  <joint name="torso_joint" type="fixed">
+  <joint name="torso_joint" type="revolute">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <parent link="pelvis" />
     <child link="torso_link" />
@@ -463,7 +450,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_shoulder_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -472,7 +459,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_shoulder_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -492,7 +479,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_shoulder_roll_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_shoulder_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -521,7 +508,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_shoulder_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -530,7 +517,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_shoulder_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -550,7 +537,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_elbow_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_elbow_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -579,7 +566,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_elbow_roll_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_elbow_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -588,7 +575,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_elbow_roll_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_elbow_roll_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -608,7 +595,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_wrist_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -617,7 +604,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_wrist_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -637,7 +624,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_wrist_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -646,7 +633,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/left_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/left_wrist_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -666,7 +653,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_shoulder_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -675,7 +662,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_shoulder_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_shoulder_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -695,7 +682,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_shoulder_roll_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_shoulder_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -724,7 +711,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_shoulder_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -733,7 +720,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_shoulder_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_shoulder_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -753,7 +740,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_elbow_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_elbow_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -782,7 +769,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_elbow_roll_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_elbow_roll_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -791,7 +778,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_elbow_roll_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_elbow_roll_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -811,7 +798,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_wrist_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -820,7 +807,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_wrist_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_wrist_pitch_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -840,7 +827,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_wrist_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -849,7 +836,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/right_wrist_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/right_wrist_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -869,7 +856,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/head_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/head_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -878,7 +865,7 @@
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/head_yaw_link.STL" />
+        <mesh filename="package://atom_p2/meshes/head_yaw_link.STL" />
       </geometry>
     </collision> -->
   </link>
@@ -898,7 +885,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://atom_urdf/meshes/head_pitch_link.STL" />
+        <mesh filename="package://atom_p2/meshes/head_pitch_link.STL" />
       </geometry>
       <material name="">
         <color rgba="1 1 1 1" />
@@ -907,7 +894,7 @@
     <collision>
       <origin xyz="0.05 0 0.1" rpy="0 0 0" />
       <geometry>
-        <!-- <mesh filename="package://atom_urdf/meshes/head_pitch_link.STL" /> -->
+        <!-- <mesh filename="package://atom_p2/meshes/head_pitch_link.STL" /> -->
         <box size="0.16 0.14 0.14"/>
       </geometry>
     </collision>

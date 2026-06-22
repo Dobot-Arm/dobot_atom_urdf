@@ -1,5 +1,5 @@
 # Dobot—Atom URDF
 
-![rviz](/image/atom_urdf.jpg)
+![rviz](/image/atom-w-p2.jpg)
 
-![rviz](/image/rviz.jpg)
+![rviz](/image/p3.jpg)

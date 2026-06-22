@@ -1,0 +1,1495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="atom_w_p2">
+  <link name="chassis_link">
+    <inertial>
+      <origin xyz="0.0313271060078484 1.95782222036744E-07 -0.139502582882653" rpy="0 0 0" />
+      <mass value="61.8588993269469" />
+      <inertia ixx="1.65625354155058" ixy="-2.05874397930842E-05" ixz="0.0385524584771666" iyy="1.6182877778546" iyz="1.48556023248171E-06" izz="2.28818093773448" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/chassis_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/chassis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="crus_pitch_link">
+    <inertial>
+      <origin xyz="-0.0110357968872941 0.00759455410631716 0.148133478193889" rpy="0 0 0" />
+      <mass value="16.7287402356628" />
+      <inertia ixx="0.305407152280789" ixy="0.00140367019302038" ixz="-0.00274642869479121" iyy="0.300274573804653" iyz="0.000208670609243466" izz="0.072354229038912" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/crus_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/crus_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="crus_pitch_joint" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="chassis_link" />
+    <child link="crus_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.9075" upper="1.0995" effort="392" velocity="3.49" />
+  </joint>
+  <link name="thigh_pitch_link">
+    <inertial>
+      <origin xyz="0.0341707342912777 -2.83055045420596E-07 0.196823087765635" rpy="0 0 0" />
+      <mass value="6.94809623995777" />
+      <inertia ixx="0.167761212974778" ixy="2.60233224127687E-07" ixz="0.0150939251959902" iyy="0.12460087788847" iyz="3.70345762677788E-08" izz="0.0787374166478197" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/thigh_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/thigh_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="thigh_pitch_joint" type="revolute">
+    <origin xyz="0 0 0.3" rpy="0 0 0" />
+    <parent link="crus_pitch_link" />
+    <child link="thigh_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.7156" upper="2.3561" effort="288" velocity="3.49" />
+  </joint>
+  <link name="plevis_pitch_link">
+    <inertial>
+      <origin xyz="-1.57982750633501E-07 0.00146773401027338 0.0465899752984715" rpy="0 0 0" />
+      <mass value="10.0338812351989" />
+      <inertia ixx="0.063000378902239" ixy="-4.72073912697904E-09" ixz="-3.97090194100444E-09" iyy="0.0539807933786137" iyz="-0.000686136216535056" izz="0.0283297965195524" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/plevis_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/plevis_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="plevis_pitch_joint" type="revolute">
+    <origin xyz="0 0 0.4" rpy="0 0 0" />
+    <parent link="thigh_pitch_link" />
+    <child link="plevis_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.2863" upper="0.9075" effort="212.5" velocity="3.49" />
+  </joint>
+  <link name="body_yaw_link">
+    <inertial>
+      <origin xyz="-0.00355648074518641 3.88431352418183E-06 0.130704900442175" rpy="0 0 0" />
+      <mass value="8.10393571022645" />
+      <inertia ixx="0.11623667686767" ixy="9.40286585121865E-08" ixz="0.00331723891351569" iyy="0.0722311576716949" iyz="4.33234135774921E-07" izz="0.0569063630382018" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/body_yaw_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/body_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="body_yaw_joint" type="revolute">
+    <origin xyz="0 0 0.1833" rpy="0 0 0" />
+    <parent link="plevis_pitch_link" />
+    <child link="body_yaw_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.7924" upper="2.7924" effort="182.28" velocity="6.49" />
+  </joint>
+  <link name="head_yaw_link">
+    <inertial>
+      <origin xyz="3.20658581830376E-08 1.46588849067254E-07 0.0385420091422708" rpy="0 0 0" />
+      <mass value="0.411938317767841" />
+      <inertia ixx="0.000246815370136898" ixy="-3.09220256978848E-10" ixz="-1.2578478704701E-10" iyy="0.000220591437507839" iyz="-2.33502619122573E-10" izz="0.000216563371911497" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/head_yaw_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/head_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="head_yaw_joint" type="revolute">
+    <origin xyz="0 0 0.3092" rpy="0 0 0" />
+    <parent link="body_yaw_link" />
+    <child link="head_yaw_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="12" velocity="11.7" />
+  </joint>
+  <link name="head_pitch_link">
+    <inertial>
+      <origin xyz="0.0282308573799577 4.09626623660004E-06 0.127179040606989" rpy="0 0 0" />
+      <mass value="1.278" />
+      <inertia ixx="0.00695427085131361" ixy="-1.75162781070124E-08" ixz="-8.62020520492889E-05" iyy="0.00762241412602358" iyz="0" izz="0.0048043864015462" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/head_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/head_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="head_pitch_joint" type="revolute">
+    <origin xyz="0 0 0.041" rpy="0 0 0.025003" />
+    <parent link="head_yaw_link" />
+    <child link="head_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.87" upper="0.698" effort="12" velocity="11.7" />
+  </joint>
+  <link name="left_shoulder_pitch_link">
+    <inertial>
+      <origin xyz="-0.00101639550297053 0.036632910981988 0.000874469257302557" rpy="0 0 0" />
+      <mass value="0.142839311085474" />
+      <inertia ixx="0.000179501066047071" ixy="-8.09123899402774E-06" ixz="1.22518087261924E-07" iyy="0.000231575773834431" iyz="-3.58537344519999E-07" izz="0.000269195159850354" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_shoulder_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_shoulder_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_shoulder_pitch_joint" type="revolute">
+    <origin xyz="0 0.1285 0.2395" rpy="0 0 0" />
+    <parent link="body_yaw_link" />
+    <child link="left_shoulder_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.97" upper="2.97" effort="93" velocity="4.6" />
+  </joint>
+  <link name="left_shoulder_roll_link">
+    <inertial>
+      <origin xyz="0.00460828638075063 0.0020709861705269 -0.0428989366112221" rpy="0 0 0" />
+      <mass value="1.79365636224454" />
+      <inertia ixx="0.0070061939887657" ixy="-9.88275500423279E-06" ixz="0.000334308324624887" iyy="0.00705995070724828" iyz="-6.58058720449976E-05" izz="0.00246578704325033" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_shoulder_roll_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_shoulder_roll_joint" type="revolute">
+    <origin xyz="0 0.078 0" rpy="0 0 0" />
+    <parent link="left_shoulder_pitch_link" />
+    <child link="left_shoulder_roll_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.43" upper="3.14" effort="70" velocity="4.5" />
+  </joint>
+  <link name="left_shoulder_yaw_link">
+    <inertial>
+      <origin xyz="-1.00034591070733E-17 -0.0439250000000105 -0.131000000000161" rpy="0 0 0" />
+      <mass value="0.00326521432450126" />
+      <inertia ixx="1.48246852608996E-07" ixy="-7.23617819967675E-24" ixz="-9.64209752121503E-35" iyy="2.75910610419947E-07" iyz="-1.70118021888661E-18" izz="1.48246852608995E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_shoulder_yaw_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_shoulder_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_shoulder_yaw_joint" type="revolute">
+    <origin xyz="0 0 -0.134" rpy="-2.1042E-05 0 0" />
+    <parent link="left_shoulder_roll_link" />
+    <child link="left_shoulder_yaw_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.97" upper="2.97" effort="70" velocity="4.5" />
+  </joint>
+  <link name="left_elbow_pitch_link">
+    <inertial>
+      <origin xyz="0.0763081759544591 0.000518771169003784 -0.000739827995126924" rpy="0 0 0" />
+      <mass value="0.212424234376269" />
+      <inertia ixx="0.000282662225093664" ixy="-9.39082697550989E-06" ixz="5.32260952317522E-06" iyy="0.000734024572112541" iyz="5.81016971938188E-08" izz="0.000868668969688946" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_elbow_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_elbow_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_elbow_pitch_joint" type="revolute">
+    <origin xyz="0 0 -0.131" rpy="0 0 0" />
+    <parent link="left_shoulder_yaw_link" />
+    <child link="left_elbow_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.87" upper="3.14" effort="70" velocity="4.5" />
+  </joint>
+  <link name="left_elbow_roll_link">
+    <inertial>
+      <origin xyz="0.0495545258120418 0.0380498369157289 -0.0194504393600071" rpy="0 0 0" />
+      <mass value="0.00021465053135625" />
+      <inertia ixx="1.60499315925729E-09" ixy="3.45458748314954E-12" ixz="-5.42144546545095E-10" iyy="3.79536303106388E-09" iyz="-2.10729982865255E-12" izz="2.23314502893092E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_elbow_roll_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_elbow_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_elbow_roll_joint" type="revolute">
+    <origin xyz="0.14529 0 0" rpy="2.1042E-05 0 0" />
+    <parent link="left_elbow_pitch_link" />
+    <child link="left_elbow_roll_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-2.97" upper="2.97" effort="34" velocity="5.1" />
+  </joint>
+  <link name="left_wrist_pitch_link">
+    <inertial>
+      <origin xyz="0.0425000000000003 0.0179989346804187 0.0179999999999976" rpy="0 0 0" />
+      <mass value="0.00637114990148011" />
+      <inertia ixx="2.88294533041976E-07" ixy="-1.16930107739406E-23" ixz="-1.55528877641785E-23" iyy="4.13328349858526E-07" iyz="-7.51904995768071E-21" izz="4.13328349858522E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_wrist_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_wrist_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_wrist_pitch_joint" type="revolute">
+    <origin xyz="0.05345 0 0" rpy="-2.1042E-05 0 0" />
+    <parent link="left_elbow_roll_link" />
+    <child link="left_wrist_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="34" velocity="5.1" />
+  </joint>
+  <link name="left_wrist_yaw_link">
+    <inertial>
+      <origin xyz="0.0221787015627525 0.000124775289461532 0.00156502938449513" rpy="0 0 0" />
+      <mass value="0.0817959955974625" />
+      <inertia ixx="0.00010796526317663" ixy="1.18142175763337E-07" ixz="-2.56907724486089E-06" iyy="0.000125683627323879" iyz="-1.38994953091275E-07" izz="7.12433436798382E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_wrist_yaw_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/left_wrist_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_wrist_yaw_joint" type="revolute">
+    <origin xyz="0.085 0 0" rpy="0 0 0" />
+    <parent link="left_wrist_pitch_link" />
+    <child link="left_wrist_yaw_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="34" velocity="5.1" />
+  </joint>
+  <link name="right_shoulder_pitch_link">
+    <inertial>
+      <origin xyz="0.0010163955008893 -0.0366329109824584 0.000874469249647791" rpy="0 0 0" />
+      <mass value="0.142839311109602" />
+      <inertia ixx="0.000179501066080277" ixy="-8.09123899099622E-06" ixz="-1.22518060322305E-07" iyy="0.000231575773867948" iyz="3.58537345453594E-07" izz="0.00026919515985162" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_shoulder_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_shoulder_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_shoulder_pitch_joint" type="revolute">
+    <origin xyz="0 -0.1285 0.2395" rpy="0 0 0" />
+    <parent link="body_yaw_link" />
+    <child link="right_shoulder_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.97" upper="2.97" effort="93" velocity="4.6" />
+  </joint>
+  <link name="right_shoulder_roll_link">
+    <inertial>
+      <origin xyz="-0.0046082863837865 -0.00207098618791016 -0.0428989374811951" rpy="0 0 0" />
+      <mass value="1.79365636129229" />
+      <inertia ixx="0.0070061939887155" ixy="-9.8827550860254E-06" ixz="-0.000334308324361687" iyy="0.007059950707778" iyz="6.58058737132699E-05" izz="0.00246578704263566" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_shoulder_roll_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_shoulder_roll_joint" type="revolute">
+    <origin xyz="0 -0.078 0" rpy="0 0 0" />
+    <parent link="right_shoulder_pitch_link" />
+    <child link="right_shoulder_roll_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-3.14" upper="0.43" effort="70" velocity="4.5" />
+  </joint>
+  <link name="right_shoulder_yaw_link">
+    <inertial>
+      <origin xyz="-5.85469173142172E-18 -0.0439250000000141 -0.131000000000161" rpy="0 0 0" />
+      <mass value="0.00326521432450128" />
+      <inertia ixx="1.48246852608997E-07" ixy="-7.23641269311054E-24" ixz="-9.64209582844648E-35" iyy="2.75910610419949E-07" iyz="-1.70107633481636E-18" izz="1.48246852608997E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_shoulder_yaw_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_shoulder_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_shoulder_yaw_joint" type="revolute">
+    <origin xyz="0 0 -0.134" rpy="2.1042E-05 0 0" />
+    <parent link="right_shoulder_roll_link" />
+    <child link="right_shoulder_yaw_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.97" upper="2.97" effort="70" velocity="4.5" />
+  </joint>
+  <link name="right_elbow_pitch_link">
+    <inertial>
+      <origin xyz="0.0763144736828659 0.000518771224565839 -0.000735999887315153" rpy="0 0 0" />
+      <mass value="0.212424235786294" />
+      <inertia ixx="0.000282662225416814" ixy="-9.39082639566073E-06" ixz="5.32260995472817E-06" iyy="0.000734024572386476" iyz="5.81020260834465E-08" izz="0.000868668969114244" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_elbow_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_elbow_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_elbow_pitch_joint" type="revolute">
+    <origin xyz="0 0 -0.131" rpy="0 0 0" />
+    <parent link="right_shoulder_yaw_link" />
+    <child link="right_elbow_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.87" upper="3.14" effort="70" velocity="4.5" />
+  </joint>
+  <link name="right_elbow_roll_link">
+    <inertial>
+      <origin xyz="0.0495545258120306 0.0380506554165919 -0.0194488380881394" rpy="0 0 0" />
+      <mass value="0.000214650531356445" />
+      <inertia ixx="1.60499315925598E-09" ixy="3.47740259589014E-12" ixz="-5.42144400687263E-10" iyy="3.79536285093917E-09" iyz="-2.17304277865326E-12" izz="2.23314520906323E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_elbow_roll_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_elbow_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_elbow_roll_joint" type="revolute">
+    <origin xyz="0.1453 0 0" rpy="-2.1042E-05 0 0" />
+    <parent link="right_elbow_pitch_link" />
+    <child link="right_elbow_roll_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-2.97" upper="2.97" effort="34" velocity="5.1" />
+  </joint>
+  <link name="right_wrist_pitch_link">
+    <inertial>
+      <origin xyz="0.0425000000000003 0.0179989346804188 0.0179999999999976" rpy="0 0 0" />
+      <mass value="0.00637114990148011" />
+      <inertia ixx="2.88294533041976E-07" ixy="-1.16932398870944E-23" ixz="-4.24463515324512E-23" iyy="4.13328349858526E-07" iyz="-7.54305192793539E-21" izz="4.13328349858521E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_wrist_pitch_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_wrist_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_wrist_pitch_joint" type="revolute">
+    <origin xyz="0.05345 0 0" rpy="2.1042E-05 0 0" />
+    <parent link="right_elbow_roll_link" />
+    <child link="right_wrist_pitch_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.57" upper="1.57" effort="34" velocity="5.1" />
+  </joint>
+  <link name="right_wrist_yaw_link">
+    <inertial>
+      <origin xyz="0.0221787015937958 0.000124800119996216 0.0015650112273474" rpy="0 0 0" />
+      <mass value="0.0817959957726681" />
+      <inertia ixx="0.000107965267407232" ixy="1.18152867641088E-07" ixz="-2.56908388202569E-06" iyy="0.000125683632095218" iyz="-1.38997962657008E-07" izz="7.12433432223476E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_wrist_yaw_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/robot/right_wrist_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_wrist_yaw_joint" type="revolute">
+    <origin xyz="0.085 0 0" rpy="0 0 0" />
+    <parent link="right_wrist_pitch_link" />
+    <child link="right_wrist_yaw_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="34" velocity="5.1" />
+  </joint>
+  <link name="right_ee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+  <link name="left_ee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+  <joint name="right_ee_fixed_joint" type="fixed">
+    <origin xyz="0.06475 0 0" rpy="0 0 0" />
+    <parent link="right_wrist_yaw_link" />
+    <child link="right_ee_link" />
+  </joint>
+  <joint name="left_ee_fixed_joint" type="fixed">
+    <origin xyz="0.06475 0 0" rpy="0 0 0" />
+    <parent link="left_wrist_yaw_link" />
+    <child link="left_ee_link" />
+  </joint>
+  <link name="right_flange_visual_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/flange/flange_0518_fixed.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="right_flange_visual_joint" type="fixed">
+    <origin xyz="0.05075 0 0" rpy="0 0 0" />
+    <parent link="right_wrist_yaw_link" />
+    <child link="right_flange_visual_link" />
+  </joint>
+  <gazebo reference="right_flange_visual_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <link name="left_flange_visual_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/flange/flange_0518_fixed.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="left_flange_visual_joint" type="fixed">
+    <origin xyz="0.05075 0 0" rpy="0 0 0" />
+    <parent link="left_wrist_yaw_link" />
+    <child link="left_flange_visual_link" />
+  </joint>
+  <gazebo reference="left_flange_visual_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <joint name="right_ag95_mount_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="right_ee_link" />
+    <child link="right_ag95_ee_link" />
+  </joint>
+  <joint name="left_ag95_mount_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="left_ee_link" />
+    <child link="left_ag95_ee_link" />
+  </joint>
+  <link name="right_ag95_ee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+  <joint name="right_ag95_gripper_base_joint" type="fixed">
+    <parent link="right_ag95_ee_link" />
+    <child link="right_ag95_gripper_base_link" />
+    <origin rpy="1.57075 0 1.57075" xyz="0 0 0" />
+  </joint>
+  <link name="right_ag95_gripper_base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/base_link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/base_link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.83416" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="0.0013016" ixy="-6.9374e-07" ixz="5.9848e-07" iyx="0.000000" iyy="0.00049972" iyz="2.0244E-07" izx="0.000000" izy="0.000000" izz="0.001498" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_base_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="right_ag95_gripper_finger1_joint" type="revolute">
+    <parent link="right_ag95_gripper_base_link" />
+    <child link="right_ag95_gripper_finger1_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 3.14" xyz="-0.016 0 0.10586" />
+    <limit lower="0.0" upper="0.6524" velocity="2.0" effort="1000" />
+  </joint>
+  <joint name="right_ag95_gripper_finger2_joint" type="revolute">
+    <parent link="right_ag95_gripper_base_link" />
+    <child link="right_ag95_gripper_finger2_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.016  0 0.10586 " />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="1000" />
+    <mimic joint="right_ag95_gripper_finger1_joint" />
+  </joint>
+  <link name="right_ag95_gripper_finger1_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.011111" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="3.88172e-06" ixy="-2.29456e-13" ixz="8.33e-07" iyx="0.000000" iyy="1.92174e-06" iyz="2.04435e-13" izx="0.000000" izy="0.000000" izz="4.32374e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger1_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="right_ag95_gripper_finger2_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.011111" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="3.88172e-06" ixy="-2.29456e-13" ixz="8.33e-07" iyx="0.000000" iyy="1.92174e-06" iyz="2.04435e-13" izx="0.000000" izy="0.000000" izz="4.32374e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger2_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="right_ag95_gripper_finger1_finger_joint" type="continuous">
+    <parent link="right_ag95_gripper_finger1_knuckle_link" />
+    <child link="right_ag95_gripper_finger1_finger_link" />
+    <axis xyz="0 -1 0" />
+    <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="right_ag95_gripper_finger1_joint" multiplier="0.4563942" offset="0" />
+  </joint>
+  <joint name="right_ag95_gripper_finger2_finger_joint" type="continuous">
+    <parent link="right_ag95_gripper_finger2_knuckle_link" />
+    <child link="right_ag95_gripper_finger2_finger_link" />
+    <axis xyz="0 -1 0" />
+    <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="right_ag95_gripper_finger1_joint" multiplier="0.4563942" offset="0" />
+  </joint>
+  <link name="right_ag95_gripper_finger1_finger_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0222871" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="8.72836e-06" ixy="7.0843e-15" ixz="-2.18833e-06" iyx="-0.000002" iyy="7.26157e-06" iyz="7.6579e-15" izx="0.000000" izy="0.000000" izz="3.3425e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger1_finger_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="right_ag95_gripper_finger2_finger_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0222871" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="8.72836e-06" ixy="7.0843e-15" ixz="-2.18833e-06" iyx="-0.000002" iyy="7.26157e-06" iyz="7.6579e-15" izx="0.000000" izy="0.000000" izz="3.3425e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger2_finger_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="right_ag95_gripper_finger1_inner_knuckle_joint" type="continuous">
+    <parent link="right_ag95_gripper_base_link" />
+    <child link="right_ag95_gripper_finger1_inner_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 3.14" xyz="-0.016 0 0.10586" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="right_ag95_gripper_finger1_joint" multiplier="1.49462955" offset="0" />
+  </joint>
+  <joint name="right_ag95_gripper_finger2_inner_knuckle_joint" type="continuous">
+    <parent link="right_ag95_gripper_base_link" />
+    <child link="right_ag95_gripper_finger2_inner_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.016 0 0.10586" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="right_ag95_gripper_finger1_joint" multiplier="1.49462955" offset="0" />
+  </joint>
+  <link name="right_ag95_gripper_finger1_inner_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0318004" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="1.39848e-05" ixy="-9.54763e-15" ixz="-5.01422e-06" iyx="0.000000" iyy="1.04943e-05" iyz="8.94585e-16" izx="0.000000" izy="0.000000" izz="1.36183e-05" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger1_inner_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="right_ag95_gripper_finger2_inner_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0318004" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="1.39848e-05" ixy="-9.54763e-15" ixz="-5.01422e-06" iyx="0.000000" iyy="1.04943e-05" iyz="8.94585e-16" izx="0.000000" izy="0.000000" izz="1.36183e-05" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger2_inner_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="right_ag95_gripper_finger1_finger_tip_joint" type="continuous">
+    <parent link="right_ag95_gripper_finger1_inner_knuckle_link" />
+    <child link="right_ag95_gripper_finger1_finger_tip_link" />
+    <axis xyz="0 1 0" />
+    <origin xyz="0.0394969463769 0.0 0.0382752038125 " rpy="0.0 0.0 0.0" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="right_ag95_gripper_finger1_joint" multiplier="1.49462955" />
+  </joint>
+  <joint name="right_ag95_gripper_finger2_finger_tip_joint" type="continuous">
+    <parent link="right_ag95_gripper_finger2_inner_knuckle_link" />
+    <child link="right_ag95_gripper_finger2_finger_tip_link" />
+    <axis xyz="0 1 0" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0394969463769  0.0 0.0382752038125  " />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="right_ag95_gripper_finger1_joint" multiplier="1.49462955" />
+  </joint>
+  <link name="right_ag95_gripper_finger1_finger_tip_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0124305" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="2.84217e-06" ixy="-2.48048e-15" ixz="8.24539e-07" iyx="0.000000" iyy="3.03961e-06" iyz="2.16427e-13" izx="0.000000" izy="0.000000" izz="1.11815e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger1_finger_tip_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="right_ag95_gripper_finger2_finger_tip_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0124305" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="2.84217e-06" ixy="-2.48048e-15" ixz="8.24539e-07" iyx="0.000000" iyy="3.03961e-06" iyz="2.16427e-13" izx="0.000000" izy="0.000000" izz="1.11815e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="right_ag95_gripper_finger2_finger_tip_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <transmission name="right_ag95_gripper_finger1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_ag95_gripper_finger1_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_ag95_gripper_finger1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <gazebo>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="right_ag95_mimic_dh_robotics_ag95_1">
+      <joint>right_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>right_ag95_gripper_finger2_joint</mimicJoint>
+      <multiplier>1.0</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="right_ag95_mimic_dh_robotics_ag95_2">
+      <joint>right_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>right_ag95_gripper_finger2_inner_knuckle_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="right_ag95_mimic_dh_robotics_ag95_3">
+      <joint>right_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>right_ag95_gripper_finger1_inner_knuckle_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="right_ag95_mimic_dh_robotics_ag95_4">
+      <joint>right_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>right_ag95_gripper_finger1_finger_tip_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="right_ag95_mimic_dh_robotics_ag95_5">
+      <joint>right_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>right_ag95_gripper_finger2_finger_tip_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="right_ag95_mimic_dh_robotics_ag95_6">
+      <joint>right_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>right_ag95_gripper_finger1_finger_joint</mimicJoint>
+      <multiplier>0.4563942</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="right_ag95_mimic_dh_robotics_ag95_7">
+      <joint>right_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>right_ag95_gripper_finger2_finger_joint</mimicJoint>
+      <multiplier>0.4563942</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+  </gazebo>
+  <link name="left_ag95_ee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+  <joint name="left_ag95_gripper_base_joint" type="fixed">
+    <parent link="left_ag95_ee_link" />
+    <child link="left_ag95_gripper_base_link" />
+    <origin rpy="1.57075 0 1.57075" xyz="0 0 0" />
+  </joint>
+  <link name="left_ag95_gripper_base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/base_link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/base_link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.83416" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="0.0013016" ixy="-6.9374e-07" ixz="5.9848e-07" iyx="0.000000" iyy="0.00049972" iyz="2.0244E-07" izx="0.000000" izy="0.000000" izz="0.001498" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_base_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="left_ag95_gripper_finger1_joint" type="revolute">
+    <parent link="left_ag95_gripper_base_link" />
+    <child link="left_ag95_gripper_finger1_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 3.14" xyz="-0.016 0 0.10586" />
+    <limit lower="0.0" upper="0.6524" velocity="2.0" effort="1000" />
+  </joint>
+  <joint name="left_ag95_gripper_finger2_joint" type="revolute">
+    <parent link="left_ag95_gripper_base_link" />
+    <child link="left_ag95_gripper_finger2_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.016  0 0.10586 " />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="1000" />
+    <mimic joint="left_ag95_gripper_finger1_joint" />
+  </joint>
+  <link name="left_ag95_gripper_finger1_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.011111" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="3.88172e-06" ixy="-2.29456e-13" ixz="8.33e-07" iyx="0.000000" iyy="1.92174e-06" iyz="2.04435e-13" izx="0.000000" izy="0.000000" izz="4.32374e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger1_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="left_ag95_gripper_finger2_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/crank_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.011111" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="3.88172e-06" ixy="-2.29456e-13" ixz="8.33e-07" iyx="0.000000" iyy="1.92174e-06" iyz="2.04435e-13" izx="0.000000" izy="0.000000" izz="4.32374e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger2_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="left_ag95_gripper_finger1_finger_joint" type="continuous">
+    <parent link="left_ag95_gripper_finger1_knuckle_link" />
+    <child link="left_ag95_gripper_finger1_finger_link" />
+    <axis xyz="0 -1 0" />
+    <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="left_ag95_gripper_finger1_joint" multiplier="0.4563942" offset="0" />
+  </joint>
+  <joint name="left_ag95_gripper_finger2_finger_joint" type="continuous">
+    <parent link="left_ag95_gripper_finger2_knuckle_link" />
+    <child link="left_ag95_gripper_finger2_finger_link" />
+    <axis xyz="0 -1 0" />
+    <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="left_ag95_gripper_finger1_joint" multiplier="0.4563942" offset="0" />
+  </joint>
+  <link name="left_ag95_gripper_finger1_finger_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0222871" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="8.72836e-06" ixy="7.0843e-15" ixz="-2.18833e-06" iyx="-0.000002" iyy="7.26157e-06" iyz="7.6579e-15" izx="0.000000" izy="0.000000" izz="3.3425e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger1_finger_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="left_ag95_gripper_finger2_finger_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/rod_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0222871" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="8.72836e-06" ixy="7.0843e-15" ixz="-2.18833e-06" iyx="-0.000002" iyy="7.26157e-06" iyz="7.6579e-15" izx="0.000000" izy="0.000000" izz="3.3425e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger2_finger_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="left_ag95_gripper_finger1_inner_knuckle_joint" type="continuous">
+    <parent link="left_ag95_gripper_base_link" />
+    <child link="left_ag95_gripper_finger1_inner_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 3.14" xyz="-0.016 0 0.10586" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="left_ag95_gripper_finger1_joint" multiplier="1.49462955" offset="0" />
+  </joint>
+  <joint name="left_ag95_gripper_finger2_inner_knuckle_joint" type="continuous">
+    <parent link="left_ag95_gripper_base_link" />
+    <child link="left_ag95_gripper_finger2_inner_knuckle_link" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.016 0 0.10586" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="left_ag95_gripper_finger1_joint" multiplier="1.49462955" offset="0" />
+  </joint>
+  <link name="left_ag95_gripper_finger1_inner_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0318004" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="1.39848e-05" ixy="-9.54763e-15" ixz="-5.01422e-06" iyx="0.000000" iyy="1.04943e-05" iyz="8.94585e-16" izx="0.000000" izy="0.000000" izz="1.36183e-05" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger1_inner_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="left_ag95_gripper_finger2_inner_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0318004" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="1.39848e-05" ixy="-9.54763e-15" ixz="-5.01422e-06" iyx="0.000000" iyy="1.04943e-05" iyz="8.94585e-16" izx="0.000000" izy="0.000000" izz="1.36183e-05" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger2_inner_knuckle_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <joint name="left_ag95_gripper_finger1_finger_tip_joint" type="continuous">
+    <parent link="left_ag95_gripper_finger1_inner_knuckle_link" />
+    <child link="left_ag95_gripper_finger1_finger_tip_link" />
+    <axis xyz="0 1 0" />
+    <origin xyz="0.0394969463769 0.0 0.0382752038125 " rpy="0.0 0.0 0.0" />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="left_ag95_gripper_finger1_joint" multiplier="1.49462955" />
+  </joint>
+  <joint name="left_ag95_gripper_finger2_finger_tip_joint" type="continuous">
+    <parent link="left_ag95_gripper_finger2_inner_knuckle_link" />
+    <child link="left_ag95_gripper_finger2_finger_tip_link" />
+    <axis xyz="0 1 0" />
+    <origin rpy="0.0 0.0 0.0" xyz="0.0394969463769  0.0 0.0382752038125  " />
+    <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1" />
+    <mimic joint="left_ag95_gripper_finger1_joint" multiplier="1.49462955" />
+  </joint>
+  <link name="left_ag95_gripper_finger1_finger_tip_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0124305" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="2.84217e-06" ixy="-2.48048e-15" ixz="8.24539e-07" iyx="0.000000" iyy="3.03961e-06" iyz="2.16427e-13" izx="0.000000" izy="0.000000" izz="1.11815e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger1_finger_tip_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <link name="left_ag95_gripper_finger2_finger_tip_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/ag95/visual/distal_phalanx_Link.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0124305" />
+      <origin xyz="0.0 0.0 0.0" />
+      <inertia ixx="2.84217e-06" ixy="-2.48048e-15" ixz="8.24539e-07" iyx="0.000000" iyy="3.03961e-06" iyz="2.16427e-13" izx="0.000000" izy="0.000000" izz="1.11815e-06" />
+    </inertial>
+  </link>
+  <gazebo reference="left_ag95_gripper_finger2_finger_tip_link">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
+  <transmission name="left_ag95_gripper_finger1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_ag95_gripper_finger1_joint">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_ag95_gripper_finger1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <gazebo>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="left_ag95_mimic_dh_robotics_ag95_1">
+      <joint>left_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>left_ag95_gripper_finger2_joint</mimicJoint>
+      <multiplier>1.0</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="left_ag95_mimic_dh_robotics_ag95_2">
+      <joint>left_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>left_ag95_gripper_finger2_inner_knuckle_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="left_ag95_mimic_dh_robotics_ag95_3">
+      <joint>left_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>left_ag95_gripper_finger1_inner_knuckle_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="left_ag95_mimic_dh_robotics_ag95_4">
+      <joint>left_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>left_ag95_gripper_finger1_finger_tip_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="left_ag95_mimic_dh_robotics_ag95_5">
+      <joint>left_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>left_ag95_gripper_finger2_finger_tip_joint</mimicJoint>
+      <multiplier>1.49462955</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="left_ag95_mimic_dh_robotics_ag95_6">
+      <joint>left_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>left_ag95_gripper_finger1_finger_joint</mimicJoint>
+      <multiplier>0.4563942</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+    <plugin filename="libroboticsgroup_gazebo_mimic_joint_plugin.so" name="left_ag95_mimic_dh_robotics_ag95_7">
+      <joint>left_ag95_gripper_finger1_joint</joint>
+      <mimicJoint>left_ag95_gripper_finger2_finger_joint</mimicJoint>
+      <multiplier>0.4563942</multiplier>
+      <offset>0.0</offset>
+    </plugin>
+  </gazebo>
+  <link name="right_camera_bracket_visual_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/camera_bracket/camera_bracket_right.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/camera_bracket/camera_bracket_right.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_camera_bracket_visual_joint" type="fixed">
+    <origin xyz="0.02 0.02 0.04" rpy="0 0 3.665191" />
+    <parent link="right_wrist_yaw_link" />
+    <child link="right_camera_bracket_visual_link" />
+  </joint>
+  <gazebo reference="right_camera_bracket_visual_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <link name="left_camera_bracket_visual_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/camera_bracket/camera_bracket_left.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/camera_bracket/camera_bracket_left.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_camera_bracket_visual_joint" type="fixed">
+    <origin xyz="0.02 -0.02 0.04" rpy="0 0 -3.665191" />
+    <parent link="left_wrist_yaw_link" />
+    <child link="left_camera_bracket_visual_link" />
+  </joint>
+  <gazebo reference="left_camera_bracket_visual_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <link name="left_whell_pitch_Link">
+    <inertial>
+      <origin xyz="0 0.018 0" rpy="0 0 0" />
+      <mass value="1.5373" />
+      <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.003" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/wheels/left_whell_pitch_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.86667 0.9098 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/wheels/left_whell_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_whell_pitch_Link">
+    <inertial>
+      <origin xyz="0 -0.018 0" rpy="0 0 0" />
+      <mass value="1.5373" />
+      <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.003" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/wheels/right_whell_pitch_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.86667 0.9098 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://atom-w-p2/meshes/wheels/right_whell_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_whell_pitch_joint" type="revolute">
+    <origin xyz="0.024993 0.202 -0.23169" rpy="0 0 0" />
+    <parent link="chassis_link" />
+    <child link="left_whell_pitch_Link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.1416" upper="3.1416" effort="6.4" velocity="31.416" />
+  </joint>
+  <joint name="right_whell_pitch_joint" type="revolute">
+    <origin xyz="0.024993 -0.202 -0.23169" rpy="0 0 0" />
+    <parent link="chassis_link" />
+    <child link="right_whell_pitch_Link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.1416" upper="3.1416" effort="6.4" velocity="31.416" />
+  </joint>
+</robot>
