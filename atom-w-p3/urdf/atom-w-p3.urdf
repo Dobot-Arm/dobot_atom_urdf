@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="atom_w_p3">
+  <link
+    name="chassis">
+    <inertial>
+      <origin
+        xyz="-0.034573 -0.00028747 0.13307"
+        rpy="0 0 0" />
+      <mass
+        value="75.9" />
+      <inertia
+        ixx="1.744"
+        ixy="-0.001"
+        ixz="0.042"
+        iyy="2.301"
+        iyz="-0.003"
+        izz="3.144" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0.016 0"
+        rpy="0 0 0" />
+      <mass
+        value="2.5" />
+      <inertia
+        ixx="0.004"
+        ixy="0"
+        ixz="0"
+        iyy="0.004"
+        iyz="0"
+        izz="0.008" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.2235 0.08"
+      rpy="0 0 0" />
+    <parent
+      link="chassis" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="6.4"
+      velocity="31.416" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="2.5" />
+      <inertia
+        ixx="0.004"
+        ixy="0"
+        ixz="0"
+        iyy="0.004"
+        iyz="0"
+        izz="0.008" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.2235 0.08"
+      rpy="0 0 0" />
+    <parent
+      link="chassis" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="6.4"
+      velocity="31.416" />
+  </joint>
+  <link
+    name="calf_pitch_link">
+    <inertial>
+      <origin
+        xyz="0 -0.011 0.148"
+        rpy="0 0 0" />
+      <mass
+        value="17.112" />
+      <inertia
+        ixx="0.407"
+        ixy="0"
+        ixz="0.001"
+        iyy="0.388"
+        iyz="0.002"
+        izz="0.08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/calf_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/calf_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="calf_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="-0.025 0 0.3117"
+      rpy="0 0 0" />
+    <parent
+      link="chassis" />
+    <child
+      link="calf_pitch_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.9076"
+      upper="1.0996"
+      effort="392"
+      velocity="3.49" />
+  </joint>
+  <link
+    name="thigh_pitch_Link">
+    <inertial>
+      <origin
+        xyz="0.03 -0.004 0.191"
+        rpy="0 0 0" />
+      <mass
+        value="6.725" />
+      <inertia
+        ixx="0.182"
+        ixy="-0.002"
+        ixz="-0.017"
+        iyy="0.144"
+        iyz="-0.001"
+        izz="0.078" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/thigh_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/thigh_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thigh_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0015 0.3"
+      rpy="0 0 0" />
+    <parent
+      link="calf_pitch_link" />
+    <child
+      link="thigh_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.7156"
+      upper="2.3213"
+      effort="392"
+      velocity="3.49" />
+  </joint>
+  <link
+    name="waist_pitch_Link">
+    <inertial>
+      <origin
+        xyz="0.002 -0.007 0.063"
+        rpy="0 0 0" />
+      <mass
+        value="10" />
+      <inertia
+        ixx="0.13"
+        ixy="0"
+        ixz="-0.004"
+        iyy="0.117"
+        iyz="0"
+        izz="0.035" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/waist_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/waist_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.4"
+      rpy="0 0 0" />
+    <parent
+      link="thigh_pitch_Link" />
+    <child
+      link="waist_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.3038"
+      upper="0.9075"
+      effort="212.5"
+      velocity="3.49" />
+  </joint>
+  <link
+    name="torso_yaw_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0.156"
+        rpy="0 0 0" />
+      <mass
+        value="10" />
+      <inertia
+        ixx="0.049"
+        ixy="0"
+        ixz="0"
+        iyy="0.101"
+        iyz="0"
+        izz="0.125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/torso_yaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/torso_yaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1833"
+      rpy="0 0 0" />
+    <parent
+      link="waist_pitch_Link" />
+    <child
+      link="torso_yaw_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="182.28"
+      velocity="6.49" />
+  </joint>
+  <link
+    name="head_yaw_link">
+    <inertial>
+      <origin
+        xyz="3.2066E-08 1.4659E-07 0.038542"
+        rpy="0 0 0" />
+      <mass
+        value="0.41194" />
+      <inertia
+        ixx="0.00024682"
+        ixy="-3.0922E-10"
+        ixz="-1.2578E-10"
+        iyy="0.00022059"
+        iyz="-2.335E-10"
+        izz="0.00021656" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/head_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/head_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002 0 0.3092"
+      rpy="0 0 0" />
+    <parent
+      link="torso_yaw_Link" />
+    <child
+      link="head_yaw_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="182.28"
+      velocity="6.49" />
+  </joint>
+  <link
+    name="head_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.028231 4.2446E-06 0.12718"
+        rpy="0 0 0" />
+      <mass
+        value="1.4757" />
+      <inertia
+        ixx="0.0069543"
+        ixy="9.8672E-09"
+        ixz="8.6212E-05"
+        iyy="0.0076224"
+        iyz="-9.0452E-10"
+        izz="0.0048044" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/head_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/head_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.041"
+      rpy="0 0 0" />
+    <parent
+      link="head_yaw_link" />
+    <child
+      link="head_pitch_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.87"
+      upper="0.61"
+      effort="12"
+      velocity="11.7" />
+  </joint>
+  <link
+    name="left_shoulder_pitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.0010164 0.036633 0.00087447"
+        rpy="0 0 0" />
+      <mass
+        value="0.4473" />
+      <inertia
+        ixx="0.0005621"
+        ixy="-2.5337E-05"
+        ixz="3.8366E-07"
+        iyy="0.00072517"
+        iyz="-1.1227E-06"
+        izz="0.00084298" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_shoulder_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_shoulder_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002 0.128 0.2395"
+      rpy="0 0 0" />
+    <parent
+      link="torso_yaw_Link" />
+    <child
+      link="left_shoulder_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="93"
+      velocity="4.6" />
+  </joint>
+  <link
+    name="left_shoulder_roll_Link">
+    <inertial>
+      <origin
+        xyz="0.0046083 0.002071 -0.042899"
+        rpy="0 0 0" />
+      <mass
+        value="1.7937" />
+      <inertia
+        ixx="0.0070062"
+        ixy="-9.8828E-06"
+        ixz="0.00033431"
+        iyy="0.00706"
+        iyz="-6.5806E-05"
+        izz="0.0024658" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_shoulder_roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_shoulder_roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.078 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_pitch_Link" />
+    <child
+      link="left_shoulder_roll_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.43"
+      upper="3.14"
+      effort="70"
+      velocity="4.5" />
+  </joint>
+  <link
+    name="left_shoulder_yaw_Link">
+    <inertial>
+      <origin
+        xyz="-0.001 0.007 -0.118"
+        rpy="0 0 0" />
+      <mass
+        value="0.098" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.002"
+        iyz="0"
+        izz="0.002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_shoulder_yaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_shoulder_yaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.134"
+      rpy="-2.1042E-05 0 0" />
+    <parent
+      link="left_shoulder_roll_Link" />
+    <child
+      link="left_shoulder_yaw_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="70"
+      velocity="4.5" />
+  </joint>
+  <link
+    name="left_elbow_pitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.055 0.002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.855" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.002"
+        iyz="0"
+        izz="0.003" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_elbow_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_elbow_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_elbow_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.131"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder_yaw_Link" />
+    <child
+      link="left_elbow_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.87"
+      upper="3.14"
+      effort="70"
+      velocity="4.5" />
+  </joint>
+  <link
+    name="left_elbow_roll_Link">
+    <inertial>
+      <origin
+        xyz="-0.023 -0.002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.213" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_elbow_roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_elbow_roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_elbow_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0.1453 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_elbow_pitch_Link" />
+    <child
+      link="left_elbow_roll_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="34"
+      velocity="5.1" />
+  </joint>
+  <link
+    name="left_wirst_pitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.043 0.004 -0.042"
+        rpy="0 0 0" />
+      <mass
+        value="1.257" />
+      <inertia
+        ixx="0.002"
+        ixy="-0.001"
+        ixz="0"
+        iyy="0.002"
+        iyz="0"
+        izz="0.003" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_wirst_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_wirst_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wirst_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.05345 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_elbow_roll_Link" />
+    <child
+      link="left_wirst_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="34"
+      velocity="5.1" />
+  </joint>
+  <link
+    name="left_wirst_yaw_Link">
+    <inertial>
+      <origin
+        xyz="-0.029 0 -0.001"
+        rpy="0 0 0" />
+      <mass
+        value="0.334" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_wirst_yaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/left_wirst_yaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wirst_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.085 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_wirst_pitch_Link" />
+    <child
+      link="left_wirst_yaw_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="34"
+      velocity="5.1" />
+  </joint>
+  <link
+    name="right_shoulder_pitch_Link">
+    <inertial>
+      <origin
+        xyz="0.00101639550658813 -0.0331329109824949 0.000874469256846089"
+        rpy="0 0 0" />
+      <mass
+        value="0.447296592454318" />
+      <inertia
+        ixx="0.000562101669240857"
+        ixy="-2.53374480925216E-05"
+        ixz="-3.83661348344992E-07"
+        iyy="0.000725171899431893"
+        iyz="1.12274787226769E-06"
+        izz="0.000842975766218598" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_shoulder_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_shoulder_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoulder_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002 -0.1315 0.2395"
+      rpy="0 0 0" />
+    <parent
+      link="torso_yaw_Link" />
+    <child
+      link="right_shoulder_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="93"
+      velocity="4.6" />
+  </joint>
+  <link
+    name="right_shoulder_roll_Link">
+    <inertial>
+      <origin
+        xyz="-0.0046083 -0.002071 -0.042899"
+        rpy="0 0 0" />
+      <mass
+        value="1.7937" />
+      <inertia
+        ixx="0.0070062"
+        ixy="-9.8828E-06"
+        ixz="-0.00033431"
+        iyy="0.00706"
+        iyz="6.5806E-05"
+        izz="0.0024658" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_shoulder_roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_shoulder_roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoulder_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0745 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_shoulder_pitch_Link" />
+    <child
+      link="right_shoulder_roll_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="0.43"
+      effort="70"
+      velocity="4.5" />
+  </joint>
+  <link
+    name="right_shoulder_yaw_Link">
+    <inertial>
+      <origin
+        xyz="-0.001 0.007 -0.118"
+        rpy="0 0 0" />
+      <mass
+        value="0.98" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.002"
+        iyz="0"
+        izz="0.002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_shoulder_yaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_shoulder_yaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoulder_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.134"
+      rpy="2.1042E-05 0 0" />
+    <parent
+      link="right_shoulder_roll_Link" />
+    <child
+      link="right_shoulder_yaw_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="70"
+      velocity="4.5" />
+  </joint>
+  <link
+    name="right_elbow_pitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.055 0.002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.855" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.002"
+        iyz="0"
+        izz="0.003" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_elbow_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_elbow_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_elbow_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.131"
+      rpy="0 0 0" />
+    <parent
+      link="right_shoulder_yaw_Link" />
+    <child
+      link="right_elbow_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.87"
+      upper="3.14"
+      effort="70"
+      velocity="4.5" />
+  </joint>
+  <link
+    name="right_elbow_roll_Link">
+    <inertial>
+      <origin
+        xyz="-0.023 -0.002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.213" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_elbow_roll_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_elbow_roll_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_elbow_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0.1453 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_elbow_pitch_Link" />
+    <child
+      link="right_elbow_roll_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="34"
+      velocity="5.1" />
+  </joint>
+  <link
+    name="right_wirst_pitch_Link">
+    <inertial>
+      <origin
+        xyz="-0.043 0.004 -0.042"
+        rpy="0 0 0" />
+      <mass
+        value="1.257" />
+      <inertia
+        ixx="0.002"
+        ixy="-0.001"
+        ixz="0"
+        iyy="0.002"
+        iyz="0"
+        izz="0.003" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_wirst_pitch_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_wirst_pitch_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wirst_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.05345 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_elbow_roll_Link" />
+    <child
+      link="right_wirst_pitch_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="34"
+      velocity="5.1" />
+  </joint>
+  <link
+    name="right_wirst_yaw_Link">
+    <inertial>
+      <origin
+        xyz="-0.029 0 -0.001"
+        rpy="0 0 0" />
+      <mass
+        value="0.081796" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_wirst_yaw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom-w-p3/meshes/right_wirst_yaw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wirst_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.085 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_wirst_pitch_Link" />
+    <child
+      link="right_wirst_yaw_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="34"
+      velocity="5.1" />
+  </joint>
+</robot>
